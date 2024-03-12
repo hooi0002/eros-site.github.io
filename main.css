@@ -1,0 +1,180 @@
+.profile {
+    width: 100%;
+    height: 100px;
+}
+
+.anim-1 {
+    font-size: 50px;
+    color: darkorchid;
+    background-color: deepskyblue;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    animation-name: text-animator;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    height: 100px;
+}
+
+@keyframes text-animator {
+    0% {
+        font-size: 30px;
+        color: lightgreen;
+    }
+
+    25% {
+        font-size: 40px;
+        color: lightsalmon;
+    }
+
+    50% {
+        font-size: 50px;
+        color: magenta;
+    }
+
+    75% {
+        font-size: 60px;
+        color: tomato;
+    }
+
+    100% {
+        font-size: 70px;
+        color: aqua;
+    }
+}
+
+.fade-in {
+    font-size: 70px;
+    color: deeppink;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: dimgrey;
+
+    animation: fade-in-animator 3s ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-in-animator {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.container {
+    width: 100%;
+    min-height: 20vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #14213d;
+}
+  
+.text span {
+    font-size: 60px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    color: #fff;
+    animation: zoomup 2s linear infinite;
+    animation-delay: calc(200ms * var(--i));
+}
+  
+@keyframes zoomup {
+    0%,
+    100% {
+        color: #00c2ba;
+        filter: blur(1px);
+        text-shadow: 0 0 10px #00c2ba, 0 0 20px #00c2ba, 0 0 30px #00c2ba,
+        0 0 40px #00c2ba, 0 0 60px #00c2ba, 0 0 80px #00c2ba, 0 0 100px #00c2ba,
+        0 0 120px #00c2ba;
+    }
+
+    5%,
+    95% {
+        filter: blur(0);
+        color: #fff;
+        text-shadow: none;
+    }
+}
+
+.sidebar-left {
+    width: 20%;
+    height: 600px;
+    float: left;
+    background-color: rgb(166, 172, 208);
+}
+
+.sidebar-right {
+    width: 20%;
+    height: 600px;
+    float: right;
+    background-color: rgb(166, 172, 208);
+}
+
+.mid-section {
+    width: 60%;
+    float: left;
+    background-color: bisque;
+    height: 600px;
+}
+
+.sidebar-left p {
+    font-weight: 700;
+    text-align: center;
+    color: navy;
+    margin-top: 30px;
+}
+
+.sidebar-left img {
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.button {
+    display: block;
+    margin: auto;
+    width: 60%;
+    background-color: darkorange;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 10px;
+    color: black;
+}
+
+.button:hover {
+    background-color: chartreuse;
+    font-weight: 800;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    background-color:pink;
+
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+td {
+    border: 5px solid magenta;
+}
+
+.footer {
+    text-align: center;
+    background-color: midnightblue;
+    color: mintcream;
+    font-weight: 700;
+}
